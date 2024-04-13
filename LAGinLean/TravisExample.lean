@@ -4,8 +4,10 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: Kevin Buzzard
 -/
 
--- import the theory of linear independence
-import Mathlib
+-- import the theory of finite-dimensional vector spaces
+import Mathlib.LinearAlgebra.FiniteDimensional
+-- import the theory of the size of finite sets.
+import Mathlib.Data.Set.Card
 
 -- Let K be a field
 variable (K : Type) [Field K]
@@ -27,5 +29,4 @@ variable {S : Set V} (hS : S.Finite) (hSspan : Submodule.span K S = ⊤)
 /-- A linearly independent set has cardinality less than or equal to that of any spanning set.
 -/
 theorem linearIndependent_card_le_span_card : Nat.card ι ≤ S.ncard := by
-
   sorry

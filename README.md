@@ -19,7 +19,7 @@ click "Code" and then "Codespaces" so it looks like this:
 
 Pic: ![codespaces installation](png/codespaces.png?raw=true "codespaces installation")
 
-Then click on the `+` ("create codespace on main"), and then wait for a few minutes. When it looks like everything has downloaded, open up the `LAGinLean` directory (not the file!) and you should see some exercises.
+Then click on "create codespace on main", and then wait for a few minutes. When it looks like everything has downloaded, open up the `LAGinLean` directory (not the file!) and you should see some exercises.
 
 ## Local installation
 

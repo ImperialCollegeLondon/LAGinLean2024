@@ -10,6 +10,8 @@ You can experiment with the material in this repository by running Lean in a web
 
 Just click here: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ImperialCollegeLondon/LAGinLean2024)
 
+When it looks like everything has downloaded, open up the `LAGinLean` directory (not the file!) and you should see some exercises.
+
 ### Method 2: via Codespaces
 
 Go to the project's [home page on GitHub](https://github.com/ImperialCollegeLondon/formalising-mathematics-2024),
@@ -17,7 +19,7 @@ click "Code" and then "Codespaces" so it looks like this:
 
 Pic: ![codespaces installation](png/codespaces.png?raw=true "codespaces installation")
 
-Then click on the `+` ("create codespace on main"), and then wait for a few minutes. When it looks like everything has downloaded, open up the `LAGinLean2024` directory (not the file!) and you should see the directories where the exercises are.
+Then click on the `+` ("create codespace on main"), and then wait for a few minutes. When it looks like everything has downloaded, open up the `LAGinLean` directory (not the file!) and you should see some exercises.
 
 ## Local installation
 
@@ -35,4 +37,4 @@ and then select the directory where you want the project installed, type in the 
 
 ![File explorer](png/file_explorer.png?raw=true "File explorer")
 
-and navigate to the `LAGinLean2024` directory, where you should find stuff.
+then navigate to the `LAGinLean` directory (not the file!) and you should see some exercises.

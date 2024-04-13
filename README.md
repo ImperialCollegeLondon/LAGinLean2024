@@ -14,7 +14,7 @@ When it looks like everything has downloaded, open up the `LAGinLean` directory 
 
 ### Method 2: via Codespaces
 
-Go to the project's [home page on GitHub](https://github.com/ImperialCollegeLondon/formalising-mathematics-2024),
+Go to the project's [home page on GitHub](https://github.com/ImperialCollegeLondon/LAGinLean2024),
 click "Code" and then "Codespaces" so it looks like this:
 
 Pic: ![codespaces installation](png/codespaces.png?raw=true "codespaces installation")

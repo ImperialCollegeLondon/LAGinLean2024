@@ -8,7 +8,7 @@ You can experiment with the material in this repository by running Lean in a web
 
 ### Method 1: via Gitpod.
 
-Just click here: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ImperialCollegeLondon/LAGinLean2024)
+Just click here: [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ImperialCollegeLondon/LAGinLean2024) . Note: the first time you run this, it might take 3-4 minutes to set up. Other times will be quicker.
 
 When it looks like everything has downloaded, open up the `LAGinLean` directory (not the file!) and you should see some exercises.
 

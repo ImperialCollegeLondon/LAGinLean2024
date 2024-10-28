@@ -26,7 +26,15 @@ namespace F
 /-- Additive axioms -/
 
 lemma add_comm (a b : F) : a + b = b + a := by
-  sorry
+  ext
+  · calc (a + b).a
+      _  = a.a + b.a := rfl
+      _  = b.a + a.a := by rw? says rw [@_root_.add_comm]
+      _  = (b + a).a := rfl
+  · calc (a + b).b
+      _  = a.b + b.b := rfl
+      _  = b.b + a.b := by rw? says rw [@_root_.add_comm]
+      _  = (b + a).b := rfl
 
 lemma zero_add (a : F) : 0 + a = a := by
   sorry
@@ -55,6 +63,7 @@ lemma left_distrib (a b c : F) : a * (b + c) = a * b + a * c := by
   sorry
 
 lemma invertibility (a : F) (ha : a ≠ 0) : ∃ b : F, a * b = 1 := by
+  use ⟨sorry, sorry⟩ -- your `b`
   sorry
 
 /-- Put it all together -/

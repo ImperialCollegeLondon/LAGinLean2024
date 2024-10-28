@@ -33,10 +33,19 @@ instance : Neg (F p) where
 /-- Additive axioms -/
 
 lemma add_comm (a b : F p) : a + b = b + a := by
-  sorry
+  ext
+  calc  (a + b).val
+    _ = (a.val + b.val) % p := rfl
+    _ = (b.val + a.val) % p := by rw?
+    _ = (b + a).val         := rfl
 
 lemma zero_add (a : F p) : 0 + a = a := by
-  sorry
+  have : a.val < p := a.cond
+  ext
+  calc  (0 + a).val
+    _ = (0 + a.val) % p := rfl
+    _ = a.val % p       := by rw?
+    _ = a.val           := by rw?
 
 lemma add_zero (a : F p) : a + 0 = a := by
   rw [add_comm, zero_add]
@@ -45,20 +54,24 @@ lemma add_assoc (a b c : F p) : (a + b) + c = a + (b + c) := by
   sorry
 
 lemma add_left_neg (a : F p) : -a + a = 0 := by
+  have := a.cond.le
   sorry
 
 /-- Multiplicative axioms -/
 
 lemma mul_comm (a b : F p) : a * b = b * a := by
+  ext
   sorry
 
 lemma zero_mul (a : F p) : 0 * a = 0 := by
+  ext
   sorry
 
 lemma mul_zero (a : F p) : a * 0 = 0 := by
   rw [mul_comm, zero_mul]
 
 lemma one_mul (a : F p) : 1 * a = a := by
+  have : a.val < p := a.cond
   sorry
 
 lemma mul_one (a : F p) : a * 1 = a := by
@@ -75,17 +88,28 @@ lemma left_distrib (a b c : F p) : a * (b + c) = a * b + a * c := by
 lemma right_distrib (a b c : F p) : (a + b) * c = a * c + b * c := by
   rw [mul_comm, left_distrib, mul_comm b, mul_comm]
 
-/-- The hard part -/
+/-
+This is the hard part, both mathematically and lean-wise.
+
+Here I have listed some lemmas that you may or may not need.
+-/
+
+#check Nat.dvd_of_mod_eq_zero
+#check Nat.Prime.dvd_mul
+#check Nat.eq_zero_of_dvd_of_lt
+#check Finite.injective_iff_surjective
 
 lemma invertibility (a : F p) (ha : a ≠ 0) : ∃ b : F p, a * b = 1 := by
-  have hint₁ : ∀ x, a * x = 0 → a = 0 := by
+  have hp : p.Prime := hp.out
+  have hint₁ : ∀ x, a * x = 0 → x = 0 := by
+    intro x hx
     sorry
   have hint₂ : Function.Injective (a * ·) := by
+    intro x y (e : a * x = a * y)
     sorry
   have hint₃ : Function.Surjective (a * ·) := by
-    -- hint hint :
-    #check Finite.injective_iff_surjective
     sorry
+  have hint₄ : ∀ b, ∃ c, a * c = b := hint₃
   sorry
 
 /-- Put it all together -/
